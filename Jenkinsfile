@@ -35,7 +35,8 @@ pipeline{
         }
         stage("deploy java spring app"){
             steps{
-                sh ''' kubectl apply -f java-deploy.yaml
+                sh ''' kubectl apply -f java-config.yaml
+                       kubectl apply -f java-deploy.yaml
                        sleep 10s
                        kubectl apply -f java-svc.yaml
                 '''
