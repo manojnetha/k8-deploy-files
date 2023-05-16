@@ -41,7 +41,7 @@ pipeline{
                 '''
             }
         }
-        stage("terraform apply"){
+        stage("deploy reactjs app"){
             steps{
                 sh ''' kubectl apply -f react-deploy.yaml
                        sleep 10s
