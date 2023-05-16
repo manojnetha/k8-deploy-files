@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-deploy
+  labels:
+    app: react
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: react
+  template:
+    metadata:
+      labels:
+        app: react
+    spec:
+      containers:
+      - name: reactjs
+        image: malleshdevops/devops14-project:react-v1
+        ports:
+        - containerPort: 80
