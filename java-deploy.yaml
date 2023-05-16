@@ -19,3 +19,14 @@ spec:
         image: malleshdevops/devops14-project:java-v1
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - mountPath: /application.properties
+          subPath: application.properties
+          name: java-config-volume
+      volumes:
+      - configMap:
+          name: java-config
+          items:
+            - key: application.properties
+              path: application.properties
+        name: java-config-volume
