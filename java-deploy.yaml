@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: javaspring
-        image: manojmanoj1122334455/java:v5
+        image: manojmanoj1122334455/java:v6
         ports:
         - containerPort: 8080
         volumeMounts:
