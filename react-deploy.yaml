@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reactjs
-        image: manojmanoj1122334455/reactjs:v8
+        image: manojmanoj1122334455/reactjs:v9
         ports:
         - containerPort: 80
